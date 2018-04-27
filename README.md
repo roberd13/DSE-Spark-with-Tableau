@@ -41,7 +41,7 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10, DSE 
   * Add the ipaddress of the node(s) running Spark SQL Thriftserver to hosts and click OK
   * Once the query completes click **Sign in** 
 
-![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/connection.png)
+[comment]: <> ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/connection.png)
 
 * When your workbook opens after Signing in. On the Data Source tab under connections.
   * Select **Spark** as the Database
