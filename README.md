@@ -32,9 +32,12 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10, DSE 
   * Run the cqlscript.sh script to create schemas and load the data. A Keyspace named **killr_video** with 2 tables **videos** and **videos_by_actor** will be created.
 
 ## Now lets Create a Connection to DSE in Tableau
-
+<!--
 * Start the Spark SQL Thriftserver on one of your DSE analytics nodes by running `dse spark-sql-thriftserver start`
 * Open Tableau and create a connection to DSE by selecting Other Databases (ODBC) under To a Server.  You may need to click more to show this option
+-->
+
+* Open Tableau and create a connection to DSE by selecting Spark SQL under To a Server.  You may need to click more to show this option
 
 * Setup your connection by 
   * Add the ipaddress of your DSE node running the Spark SQL Thrift Server 
