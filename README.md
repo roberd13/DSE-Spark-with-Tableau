@@ -36,20 +36,31 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10, DSE 
 * Start the Spark SQL Thriftserver on one of your DSE analytics nodes by running `dse spark-sql-thriftserver start`
 * Open Tableau and create a connection to DSE by selecting Other Databases (ODBC) under To a Server.  You may need to click more to show this option
 
-* Setup your connection by selecting Driver => Simba Spark ODBC Driver => Connect
-  * Enter a description
-  * Add the ipaddress of the node(s) running Spark SQL Thriftserver to hosts and click OK
-  * Once the query completes click **Sign in** 
+* Setup your connection by 
+  * Add the ipaddress of your DSE node running the Spark SQL Thrift Server 
+  * Set Port to 10000
+  * Set Type to SparkThriftServer
+  * Authentication to username 
+  * Click **Sign in** 
+
+![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/sparksql_tableau.png)
 
 <!-- ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/connection.png) 
-
 * When your workbook opens after Signing in. On the Data Source tab under connections.
   * Select **Spark** as the Database
   * Search Schema using the drop down and Select **Killr_video** 
   * Search Table using the drop down and your tables will be listed
+  * Drag **videos and videos_by_actor** to the tables area 
+  -->
+* When your workbook opens after Signing in. On the Data Source tab under connections.
+  * Search Schema using the drop down and Select **Killr_video** 
+  * Search Table using the drop down and your tables will be listed
   * Drag **videos and videos_by_actor** to the tables area
-  
-<!-- ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Data%20Source.png) -->
+
+<!-- 
+![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Data%20Source.png) 
+-->
+![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/Data%20Source.png)
 
   * Be sure to keep a Live connection, if you use Extract, all of the data will be loaded into Tableau.  
   * Create an inner join clause for Release Year = Release Year (Videos By Actor. (click on the blue part of the link between the 2 tables to be able to edit this inner join)
@@ -58,7 +69,10 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10, DSE 
 
   * Click **Update Now** to see a sample of your data
   
-<!-- ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Updated%20Data.png) -->
+![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/Updated%20Data.png)
+<!-- 
+![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Updated%20Data.png) 
+-->
 
 ## Now Lets See the Count of Movies grouped by Movie Ratings Per Year
 
